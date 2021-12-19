@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<table border="1" style="width:50%;">
+<form method="post" action="{% url 'registerprocess' %}">
+    {% csrf_token %}
+    <tr>
+        <th>Fullname :</th>
+        <td><input type="text" name="fullname" id="fullname" required></td>
+    </tr>
+    <tr>
+        <th>Email :</th>
+        <td><input type="email" name="email" id="email" required></td>
+    </tr>
+    <tr>
+        <th>Gender :</th>
+        <td><input type="radio" name="gender" id="gender" value="male">Male
+            <input type="radio" name="gender" id="gender1" value="female">Female
+            <input type="radio" name="gender" id="gender2" value="not">Not
+        </td>
+    </tr>
+    <tr>
+        <th>Mobile :</th>
+        <td><input type="number" name="mob" id="mob" required></td>
+    </tr>
+    <tr>
+        <th>Category :</th>
+        <td><select name="category" id="category">
+            <option value="software">Software</option>
+            <option value-="network">Network</option>
+        </select></td>
+    </tr>
+    <tr>
+        <th>Username :</th>
+        <td><input type="text" name="uname" id="uname" required></td>
+    </tr>
+    <tr>
+        <th>Password: </th>
+        <td><input type="password" name="pass" id="pass" required> </td>
+    </tr>
+    <tr>
+        <td colspan="2"  align="center"><input type="submit" name="sub" value="Save"></td>
+    </tr>
+</form>
+</table>
+ You have Already Account? Login<a href="{% url 'login' %}"> here</a>
+</body>
+</html>

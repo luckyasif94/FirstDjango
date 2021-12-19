@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Home</title>
+</head>
+<body>
+<h3>Welcome to User Page</h3>
+
+<p style="float:right;">
+    <a href="{% url 'image' %}">Image Upload</a>
+    <a href="{% url 'logout1' %}">Logout</a> </p>
+<h4>User Profile</h4>
+<table border="1" style="width:50%;">
+    <thead>
+    <tr>
+        <th>Fullname</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{adm.Fullname}}</td>
+        <td>{{adm.Email}}</td>
+        <td>{{adm.Gender}}</td>
+        <td>{{adm.mobile}}</td>
+        <td>{{adm.Category}}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

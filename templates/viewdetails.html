@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view details</title>
+</head>
+<body>
+    <table border="1" style="width:50%;">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for e in exm %}
+        <tr>
+            <td>{{e.name}}</td>
+            <td>{{e.age}}</td>
+            <td><a href="{% url 'editdetails' e.id %}">Edit</a> <a href="{% url 'deletedetails' e.id %}">Delete</a> </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<a href="{% url 'exam' %}"> Add Details</a>
+</body>
+</html>

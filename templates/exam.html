@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'exam' %}" name="f1">
+    {% csrf_token %}
+    <div> Name :
+        <input type="text" name="n1" id="n1" required>
+    </div>
+    <div> Age :
+        <input type="number" name="a1" id="a1" required>
+    </div>
+    <div>
+        <input type="submit" name="s1" value="Save">
+    </div>
+</form>
+
+<p> name is {{n}}   age is {{a}}</p>
+
+<a href="{% url 'viewdetails' %}">View Details</a>
+
+</body>
+</html>

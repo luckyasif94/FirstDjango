@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<table border="1" style="width:50%;">
+<form method="post" action="{% url 'loginprocess' %}">
+    {% csrf_token %}
+    <tr>
+        <th>Username :</th>
+        <td><input type="text" name="uname" id="uname" required></td>
+    </tr>
+    <tr>
+        <th>Password: </th>
+        <td><input type="password" name="pass" id="pass" required> </td>
+    </tr>
+    <tr>
+        <td colspan="2"  align="center"><input type="submit" name="sub" value="Login"></td>
+    </tr>
+</form>
+
+</table>
+<a href="{% url 'register' %}">Register</a>
+</body>
+</html>

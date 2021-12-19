@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Upload</title>
+</head>
+<body>
+ <a href="{% url 'logout1' %}">Logout</a> </p>
+<h3>Image Upload</h3>
+<table border="1" style="width:50%;">
+    <form method="post" action="{% url 'imageprocess' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <tr>
+            <th>Upload Image:</th>
+            <td><input type="file" name="image" id="image" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" name="s1" value="Upload">
+            </td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>
